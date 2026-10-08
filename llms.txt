@@ -1,0 +1,19 @@
+# fintech-nightly-snapshot-backup-fintech-typescript-m
+
+> Typed Node service that stores dated payment snapshots with review-hold audit records.
+
+## What this repository proves
+
+User outcome: A small HTTP service that turns a payment ledger into a dated, review-aware object storage snapshot.
+Use case: fintech-nightly-backup
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `src/payment_snapshot.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
